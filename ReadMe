@@ -1,0 +1,73 @@
+UI automation test task
+Problem Statement :
+•	How would you test search UI functionality of your favorite website (e.g. https://medium.com, https://www.google.de )? Choose your favourite website which has search functionality.
+i.	Document several test cases.
+ii.	Implement one or two automated tests based on the test cases
+Solution:
+•	I have planned to automate the search functionality of google.com URL: https://www.google.com Test scenarios identified as below.
+Tests Identified
+1.	Navigate to https://www.google.com site
+2.	Verify that google Search bar is displayed.
+3.	Verify that page title.
+4.	User should be able to enter query string into google search bar
+5.	Upon entering the query string in search bar, Auto populate list should be populated
+6.	On clicking the search button, google should show the search results based on query string.
+7.	Verify if application shows dictionary for searched word
+8.	The result page should contain Menu bar with options like Map, Images etc.
+9.	On click of any of the item from above mentioned Menu bar, it should open relevant results. e.g. On click of Images, the result containing images relevant to search query should be displayed
+10.	On click of settings dropdown containing multiple setting options should be displayed
+11.	On click of Languages under Settings, user should get redirected to Language specific settings to select preferred language
+
+Tests Automated
+1.	Navigate to https://www.google.com site
+2.	Verify that site is opened.
+3.	Verify the page title.
+4.	User should be able to enter text into search bar
+5.	On entering text in search bar, auto populate list is populated as per query string.
+6.	Verify that page shows dictionary for searched word
+Prerequisites
+Project repository is cloned to your drive using following command
+git clone https://github.com/anupam78/Automation.git
+Chromedriver needed to be do downloaded on your machine. It can be downloaded from: https://chromedriver.storage.googleapis.com/index.html?path=2.43/
+Setting Driver to Chromedriver
+Help WebDriver find the downloaded ChromeDriver executable, any of the following steps should do the trick:
+1.	Include the ChromeDriver location in your PATH environment variable
+2.	Specify its location via the webdriver.chrome.driver system property (see sample below)
+Setting chromedriver path in this project:
+•	Under src/test/java go to package stepdefs and open BaseDriverClass file
+•	Under BaseDriverClass constructor modify the below code line and provide path to downloaded chromedriver
+System.setProperty("webdriver.chrome.driver","/path/to/driver/file");
+
+
+
+Install or enable below plugins in your environment:
+Cucumber for Java  182.3934
+Gherkin 182.3933
+Substeps Intellij Plugin 1.1.1
+Running the tests
+From the main menu build and run the project
+Test Report
+Test Reports could be found at:
+./cucumber-reports/cucumber-pretty/index.html
+About the cucumber-gherkin test framework :
+•	Cucumber is a tool based on Behavior Driven Development (BDD) framework which is used to write acceptance tests for the web application.
+•	It allows automation of functional validation in easily readable and understandable format (like plain English) to Business Analysts, Developers, Testers.
+•	Cucumber feature files can serve as a good document for all.
+•	Initially, Cucumber was implemented in Ruby and then extended to Java framework. Both the tools support native JUnit.
+•	Cucumber support Maven To build and manage project dependencies.
+•	Cucumber can be used along with Selenium, Watir, and Capybara etc.
+•	Cucumber supports many other languages like Perl, PHP, Python, Net etc.
+•	Cucumber works with multiple languages, IDEs, CI/CD tools and automation drivers.
+•	Cucumber can be used as a easy tool for data driven testing by creating the data table in the feature file itself. The data in the data table can be passed as parameter in the Given, When and then conditions.
+•	Gherkin is a structured language it follows some syntax.
+•	Gherkin contains a set of keywords (Given, When, Then)which define different premise of the scenario.
+•	Gherkin test is written in plain English which is common to all the domains of your project team.
+•	Gherkin test is structured that makes it capable of being read in an automated way. There by creating automation tests at the same time while describing the scenario
+
+
+Built With
+•	Cucumber - The test framework used
+•	Maven - Dependency Management
+•	Selenium - Used for Web-Browser Automation
+•	Code behind language : Java
+•	Gherkin – For creating the feature file and step definition
